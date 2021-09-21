@@ -6,13 +6,23 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
     public float timeLeft = 11;
-    private bool timerEnabled = true;
+    public bool timerEnabled = true;
 
     public Text timeText;
 
     public GameObject gameOverScreen;
     public GameObject winScreen;
 
+    public _physicsPlayer movementScript;
+
+
+
+
+    public void Start()
+    {
+        movementScript.enabled = true;
+
+    }
     private void Update()
     {
         if (timerEnabled)
@@ -22,6 +32,7 @@ public class Timer : MonoBehaviour
                 gameOverScreen.active = false;
                 timeLeft -= Time.deltaTime;
                 winScreen.active = false;
+                movementScript.enabled = true;
             }
             else
             {
@@ -29,12 +40,17 @@ public class Timer : MonoBehaviour
                 timeLeft = 0;
                 gameOverScreen.active = true;
                 winScreen.active = false;
-
+                movementScript.enabled = false;
             }
 
         } else
         {
-            winScreen.active = true;
+            if(gameOverScreen.active = false)
+            {
+                winScreen.active = true;
+                
+            }
+            movementScript.enabled = false;
 
 
         }
