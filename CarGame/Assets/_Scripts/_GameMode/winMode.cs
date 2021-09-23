@@ -14,8 +14,10 @@ public class winMode : MonoBehaviour
         {
             Debug.Log("Entered Delivery Zone");
 
-            timerScript.timerEnabled = false;
 
+            timerScript.playerLost = false;
+            timerScript.timerEnabled = false;
+            
         }
         
     }
@@ -25,6 +27,7 @@ public class winMode : MonoBehaviour
         {
             Debug.Log("Left Delivery Zone");
             timerScript.timerEnabled = false;
+            
 
         }
     }

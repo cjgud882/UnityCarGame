@@ -15,44 +15,57 @@ public class Timer : MonoBehaviour
 
     public _physicsPlayer movementScript;
 
+    public bool playerLost = false;
+    public bool playerWon = false;
 
 
-
+    public void Awake()
+    {
+        playerLost = false;
+    }
     public void Start()
     {
         movementScript.enabled = true;
-
+        playerLost = false;
+        
     }
     private void Update()
     {
+       
+
+
+
         if (timerEnabled)
         {
             if (timeLeft > 0)
             {
-                gameOverScreen.active = false;
                 timeLeft -= Time.deltaTime;
-                winScreen.active = false;
                 movementScript.enabled = true;
+                
             }
             else
             {
                 Debug.Log("Timer Done...");
                 timeLeft = 0;
-                gameOverScreen.active = true;
-                winScreen.active = false;
+                
                 movementScript.enabled = false;
+                timerEnabled = false;
+                playerLost = true;
             }
 
         } else
         {
-            if(gameOverScreen.active = false)
+            if (playerLost == false)
             {
                 winScreen.active = true;
-                
+                movementScript.enabled = false;
+                Debug.Log("W");
+            } else if(playerLost == true)
+            {
+                Debug.Log("L");
+                gameOverScreen.active = true;
+
             }
-            movementScript.enabled = false;
-
-
         }
 
 

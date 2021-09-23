@@ -685,6 +685,85 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &10279962
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 10279963}
+  - component: {fileID: 10279965}
+  - component: {fileID: 10279964}
+  m_Layer: 5
+  m_Name: Score
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &10279963
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 10279962}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1164962351}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 379, y: 249.79999}
+  m_SizeDelta: {x: 160, y: 41.4}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &10279964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 10279962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0.9584457, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 36
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 3
+    m_MaxSize: 40
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 000
+--- !u!222 &10279965
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 10279962}
+  m_CullTransparentMesh: 0
 --- !u!1 &11451544
 GameObject:
   m_ObjectHideFlags: 0
@@ -55119,6 +55198,7 @@ RectTransform:
   - {fileID: 1252419406}
   - {fileID: 427272727}
   - {fileID: 1932591303}
+  - {fileID: 10279963}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -59499,7 +59579,7 @@ GameObject:
   - component: {fileID: 1252419408}
   - component: {fileID: 1252419407}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Timer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67279,6 +67359,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1423873168}
   - component: {fileID: 1423873167}
+  - component: {fileID: 1423873169}
   m_Layer: 0
   m_Name: _GameManager
   m_TagString: Untagged
@@ -67304,6 +67385,8 @@ MonoBehaviour:
   gameOverScreen: {fileID: 1240751895}
   winScreen: {fileID: 2084102402}
   movementScript: {fileID: 1670322135}
+  playerLost: 0
+  playerWon: 0
 --- !u!4 &1423873168
 Transform:
   m_ObjectHideFlags: 0
@@ -67318,6 +67401,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1423873169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423873166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0041897c8abd1f24cba4abc929de66de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playScore: 0
+  afterScore: 0
+  scoreText: {fileID: 10279964}
+  timerScript: {fileID: 1423873167}
 --- !u!1 &1425786045
 GameObject:
   m_ObjectHideFlags: 0
@@ -97328,7 +97427,7 @@ GameObject:
   - component: {fileID: 2084102405}
   - component: {fileID: 2084102404}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: winPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100462,15 +100561,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Car
       objectReference: {fileID: 0}
+    - target: {fileID: 4047338558313843524, guid: d18ba60746950774abaab638dbee042c,
+        type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 519420031}
     - target: {fileID: 4047338558654738454, guid: d18ba60746950774abaab638dbee042c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -48.2
+      value: 12.5
       objectReference: {fileID: 0}
     - target: {fileID: 4047338558654738454, guid: d18ba60746950774abaab638dbee042c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 36.8
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4047338558654738454, guid: d18ba60746950774abaab638dbee042c,
         type: 3}
@@ -100517,11 +100621,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4047338558313843524, guid: d18ba60746950774abaab638dbee042c,
-        type: 3}
-      propertyPath: mainCamera
-      value: 
-      objectReference: {fileID: 519420031}
     - target: {fileID: 4047338558313843526, guid: d18ba60746950774abaab638dbee042c,
         type: 3}
       propertyPath: m_LocalPosition.x
