@@ -67360,6 +67360,7 @@ GameObject:
   - component: {fileID: 1423873168}
   - component: {fileID: 1423873167}
   - component: {fileID: 1423873169}
+  - component: {fileID: 1423873170}
   m_Layer: 0
   m_Name: _GameManager
   m_TagString: Untagged
@@ -67417,6 +67418,23 @@ MonoBehaviour:
   afterScore: 0
   scoreText: {fileID: 10279964}
   timerScript: {fileID: 1423873167}
+--- !u!114 &1423873170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423873166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c388f05c691151640a63084116204ffa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Menu: {fileID: 0}
+  menuCursor: {fileID: 2800000, guid: f34dbf83c52308b4f9e88d4bf2b31ee7, type: 3}
+  gameCursor: {fileID: 2800000, guid: 22fa5e97cebc62e4dabdb972075879d0, type: 3}
+  cursorMode: 0
+  hotSpot: {x: 0, y: 0}
 --- !u!1 &1425786045
 GameObject:
   m_ObjectHideFlags: 0
