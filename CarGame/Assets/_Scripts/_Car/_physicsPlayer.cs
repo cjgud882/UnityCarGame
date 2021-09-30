@@ -90,7 +90,7 @@ public class _physicsPlayer : MonoBehaviour
     private void MovementHandlersRigid()
     {
         GetComponent<Rigidbody2D>().AddForce(transform.right * speed);
-        if (GetComponent<Rigidbody2D>().velocity.magnitude > 0.5f)
+        if (GetComponent<Rigidbody2D>().velocity.magnitude > 1f)
         {
             GetComponent<Rigidbody2D>().angularDrag = startAngDrag;
             GetComponent<Rigidbody2D>().AddTorque(-Input.GetAxisRaw("Horizontal") * 15);
