@@ -48,7 +48,7 @@ public class _physicsPlayer : MonoBehaviour
     {
         if (speed > startOrthoSize)
         {
-            Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize, 5f, Time.deltaTime * 0.5f); //complex math shit
+            Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize, 5f, Time.deltaTime * 0.5f); //complex math stuff
         }
         else
         {
@@ -57,7 +57,7 @@ public class _physicsPlayer : MonoBehaviour
         Camera.main.transform.position -= (Camera.main.transform.position - new Vector3(transform.position.x, transform.position.y, -10f)) * Time.deltaTime * 10f;
     }
 
-    //input from keyboard and gamepad because why tf not
+    //input from keyboard and gamepad because why not
     private void InputHandlingKB()
     {
         if (Input.GetKey(KeyCode.W) || Input.GetAxisRaw("Fire2") > 0f)
@@ -86,7 +86,7 @@ public class _physicsPlayer : MonoBehaviour
             speed = 0f;
         }
     }
-    //rigidbody2d shit
+    //rigidbody2d 
     private void MovementHandlersRigid()
     {
         GetComponent<Rigidbody2D>().AddForce(transform.right * speed);
