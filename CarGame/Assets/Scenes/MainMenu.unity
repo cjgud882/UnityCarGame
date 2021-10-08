@@ -487,7 +487,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &421297082
 GameObject:
@@ -1319,7 +1319,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &1583785154
 Animator:
   serializedVersion: 3
@@ -2103,6 +2103,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: gameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 537446045003733866, guid: 42643d790c4dbd841835c847edae5218,
+        type: 3}
+      propertyPath: introCanvas
+      value: 
+      objectReference: {fileID: 826330659}
+    - target: {fileID: 537446045003733866, guid: 42643d790c4dbd841835c847edae5218,
+        type: 3}
+      propertyPath: menuCanvas
+      value: 
+      objectReference: {fileID: 2071173546}
+    - target: {fileID: 537446045003733866, guid: 42643d790c4dbd841835c847edae5218,
+        type: 3}
+      propertyPath: levelCanvas
+      value: 
+      objectReference: {fileID: 1091385971}
+    - target: {fileID: 537446045003733866, guid: 42643d790c4dbd841835c847edae5218,
+        type: 3}
+      propertyPath: settingsCanvas
+      value: 
+      objectReference: {fileID: 2042724810}
+    - target: {fileID: 537446045003733866, guid: 42643d790c4dbd841835c847edae5218,
+        type: 3}
+      propertyPath: aboutCanvas
+      value: 
+      objectReference: {fileID: 304167997}
     - target: {fileID: 537446045003733867, guid: 42643d790c4dbd841835c847edae5218,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2141,7 +2166,7 @@ PrefabInstance:
     - target: {fileID: 537446045003733867, guid: 42643d790c4dbd841835c847edae5218,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 537446045003733867, guid: 42643d790c4dbd841835c847edae5218,
         type: 3}
@@ -2158,31 +2183,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 537446045003733866, guid: 42643d790c4dbd841835c847edae5218,
-        type: 3}
-      propertyPath: introCanvas
-      value: 
-      objectReference: {fileID: 826330659}
-    - target: {fileID: 537446045003733866, guid: 42643d790c4dbd841835c847edae5218,
-        type: 3}
-      propertyPath: menuCanvas
-      value: 
-      objectReference: {fileID: 2071173546}
-    - target: {fileID: 537446045003733866, guid: 42643d790c4dbd841835c847edae5218,
-        type: 3}
-      propertyPath: levelCanvas
-      value: 
-      objectReference: {fileID: 1091385971}
-    - target: {fileID: 537446045003733866, guid: 42643d790c4dbd841835c847edae5218,
-        type: 3}
-      propertyPath: settingsCanvas
-      value: 
-      objectReference: {fileID: 2042724810}
-    - target: {fileID: 537446045003733866, guid: 42643d790c4dbd841835c847edae5218,
-        type: 3}
-      propertyPath: aboutCanvas
-      value: 
-      objectReference: {fileID: 304167997}
     m_RemovedComponents:
     - {fileID: 537446045003733868, guid: 42643d790c4dbd841835c847edae5218, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 42643d790c4dbd841835c847edae5218, type: 3}

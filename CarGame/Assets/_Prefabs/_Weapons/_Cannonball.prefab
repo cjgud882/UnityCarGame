@@ -12,9 +12,8 @@ GameObject:
   - component: {fileID: 8528044058548990183}
   - component: {fileID: 1967852944297425816}
   - component: {fileID: 1799341640524490240}
-  - component: {fileID: 8455416466026525135}
   m_Layer: 0
-  m_Name: Cannonball
+  m_Name: _Cannonball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,7 +70,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6ec9c7609974e45499ade6e1dc008300, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a3d962d5b8a70a8499e2ae4033e828a6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -129,15 +128,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9766656, y: 1.1887532}
   m_EdgeRadius: 0
---- !u!114 &8455416466026525135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 697604381945559119}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd5a74ff33ac5d643a9c217b5989384e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
