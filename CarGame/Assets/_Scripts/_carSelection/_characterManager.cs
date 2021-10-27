@@ -15,7 +15,7 @@ public class _characterManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        UpdateCharacter(selectedOption);
     }
 
     public void NextOption()
@@ -26,6 +26,20 @@ public class _characterManager : MonoBehaviour
         {
             selectedOption = 0;
         }
+
+        UpdateCharacter(selectedOption);
+    }
+
+    public void BackOption()
+    {
+        selectedOption--;
+
+        if (selectedOption < 0)
+        {
+            selectedOption = characterDB.characterCount - 1;
+        }
+
+        UpdateCharacter(selectedOption);
     }
 
     private void UpdateCharacter(int selectedOption)

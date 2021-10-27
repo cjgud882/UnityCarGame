@@ -7,5 +7,4 @@ public class _character
 {
     public string characterName;
     public Sprite characterSprite;
-
 }
