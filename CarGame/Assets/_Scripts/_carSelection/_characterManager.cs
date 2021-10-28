@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class _characterManager : MonoBehaviour
 {
@@ -15,6 +16,15 @@ public class _characterManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (!PlayerPrefs.HasKey("selectedOption"))
+        {
+            selectedOption = 0;
+        }
+        else
+        {
+            Load();
+        }
+
         UpdateCharacter(selectedOption);
     }
 
@@ -42,10 +52,31 @@ public class _characterManager : MonoBehaviour
         UpdateCharacter(selectedOption);
     }
 
+    public void SelectOption()
+    {
+        Save();
+    }
+
     private void UpdateCharacter(int selectedOption)
     {
         _character character = characterDB.GetCharacter(selectedOption);
         artworkSprite.sprite = character.characterSprite;
         nameText.text = character.characterName;
+    }
+    
+    private void Load()
+    {
+        selectedOption = PlayerPrefs.GetInt("selectedOption");
+    }
+
+    private void Save()
+    {
+        PlayerPrefs.SetInt("selectedOption", selectedOption);
+        PlayerPrefs.Save();
+    }
+
+    public void changeScene(int sceneID)
+    {
+        SceneManager.LoadScene(sceneID);
     }
 }
