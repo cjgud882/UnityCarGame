@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - endZone
+  - Rocket
+  - Bullet
+  - Bomb
   layers:
   - Default
   - TransparentFX
