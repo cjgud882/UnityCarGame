@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class inputHandler : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class inputHandler : MonoBehaviour
     public GameObject settingsCanvas;
     public GameObject aboutCanvas;
 
+   
 
 
     public void Start()
@@ -47,11 +49,13 @@ public class inputHandler : MonoBehaviour
 
     public void startLevelMenu()
     {
-        introCanvas.active = false;
-        menuCanvas.active = false;
-        aboutCanvas.active = false;
-        levelCanvas.active = true;
-        settingsCanvas.active = false;
+        SceneManager.LoadScene(sceneName: "Level 1");
+        Debug.Log("y");
+       // introCanvas.active = false;
+       // menuCanvas.active = false;
+       // aboutCanvas.active = false;
+       // levelCanvas.active = true;
+       // settingsCanvas.active = false;
     }
     public void startSettingsMenu()
     {
@@ -61,13 +65,10 @@ public class inputHandler : MonoBehaviour
         levelCanvas.active = false;
         settingsCanvas.active = true;
     }
-    public void startAboutMenu()
+    public void startCarMenu()
     {
-        introCanvas.active = false;
-        menuCanvas.active = false;
-        aboutCanvas.active = true;
-        levelCanvas.active = false;
-        settingsCanvas.active = false;
+        SceneManager.LoadScene(sceneName: "CarSelection");
+
     }
 
 }
