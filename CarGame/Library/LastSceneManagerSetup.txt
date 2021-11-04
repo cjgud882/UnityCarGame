@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/Scenes/Level 1/Level 1.unity
-=======
-- path: Assets/Scenes/CarSelection.unity
->>>>>>> main
   isLoaded: 1
   isActive: 1
