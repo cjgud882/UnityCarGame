@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class winMode : MonoBehaviour
 {
 
     public Timer timerScript;
+    public Text deliveredText;
 
     public void OnTriggerEnter(Collider other)
     {
@@ -15,9 +17,9 @@ public class winMode : MonoBehaviour
             Debug.Log("Entered Delivery Zone");
 
 
-            timerScript.playerLost = false;
-            timerScript.timerEnabled = false;
-            
+            timerScript.pizzasDelivered += 1;
+            Debug.Log(timerScript.pizzasDelivered);
+            deliveredText.text = timerScript.pizzasDelivered.ToString();
         }
         
     }
@@ -26,7 +28,7 @@ public class winMode : MonoBehaviour
         if(other.gameObject.tag=="endZone")
         {
             Debug.Log("Left Delivery Zone");
-            timerScript.timerEnabled = false;
+            
             
 
         }
